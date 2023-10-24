@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>mongo | vdoc</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="stylesheet" href="doc.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<script src="dark-mode.js"></script>
+	</head>
+
+	<body>
+		<div><a id="skip-to-content-link" href="#main-content">Skip to content</a></div>
+		<div id="page">
+			<header class="doc-nav hidden">
+				<div class="heading-container">
+					<div class="heading">
+						<div class="info">
+							<div class="module">mongo</div>
+							<div class="toggle-version-container">
+								<span> e0e0987</span>
+								<div
+									id="dark-mode-toggle"
+									role="switch"
+									aria-checked="false"
+									aria-label="Toggle dark mode"
+								>
+									<svg xmlns="http://www.w3.org/2000/svg" class="light-icon" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="dark-icon" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M11.1,12.08C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12c0,0.14,0.02,0.28,0.02,0.42 C2.62,12.15,3.29,12,4,12c1.66,0,3.18,0.83,4.1,2.15C9.77,14.63,11,16.17,11,18c0,1.52-0.87,2.83-2.12,3.51 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C18,17.72,13.38,16.52,11.1,12.08z"/></g><path d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z"/></g></g></svg>
+
+								</div>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" id="toggle-menu" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+						</div>
+						<div id="search">
+							<input type="text" placeholder="Search... (beta)" autocomplete="off" />
+						</div>
+					</div>
+				</div>
+				<nav class="search hidden"></nav>
+				<nav class="content hidden">
+					<ul>
+						<li class="open"><a href="#readme_mongo">README</a></li>
+<li class="open"><a href="#new_oid">fn new_oid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#to_oid">fn to_oid</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#to_bson">fn to_bson</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#to_json">fn to_json</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#OId">struct OId</a>        <ul>
+<li><a href="#OId.str">fn str</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Bson">struct Bson</a>        <ul>
+<li><a href="#Bson.destroy">fn destroy</a></li>
+<li><a href="#Bson.str">fn str</a></li>
+<li><a href="#Bson.oid">fn oid</a></li>
+<li><a href="#Bson.decode">fn decode</a></li>
+</ul>
+</li>
+<li class="open"><a href="#C.bson_t">struct C.bson_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.bson_error_t">struct C.bson_error_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.mongoc_uri_t">struct C.mongoc_uri_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.mongoc_client_t">struct C.mongoc_client_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.mongoc_database_t">struct C.mongoc_database_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.mongoc_collection_t">struct C.mongoc_collection_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#C.mongoc_cursor_t">struct C.mongoc_cursor_t</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Collection">struct Collection</a>        <ul>
+<li><a href="#Collection.find">fn find</a></li>
+<li><a href="#Collection.find_one">fn find_one</a></li>
+<li><a href="#Collection.insert">fn insert</a></li>
+<li><a href="#Collection.update">fn update</a></li>
+<li><a href="#Collection.delete">fn delete</a></li>
+<li><a href="#Collection.destroy">fn destroy</a></li>
+<li><a href="#Collection.drop">fn drop</a></li>
+</ul>
+</li>
+<li class="open"><a href="#close">fn close</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#uri">fn uri</a>        <ul>
+</ul>
+</li>
+<li class="open"><a href="#Uri">struct Uri</a>        <ul>
+<li><a href="#Uri.destroy">fn destroy</a></li>
+<li><a href="#Uri.client">fn client</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Client">struct Client</a>        <ul>
+<li><a href="#Client.destroy">fn destroy</a></li>
+<li><a href="#Client.database">fn database</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Database">struct Database</a>        <ul>
+<li><a href="#Database.destroy">fn destroy</a></li>
+<li><a href="#Database.drop">fn drop</a></li>
+<li><a href="#Database.collection">fn collection</a></li>
+</ul>
+</li>
+<li class="open"><a href="#Cursor">struct Cursor</a>        <ul>
+<li><a href="#Cursor.destroy">fn destroy</a></li>
+<li><a href="#Cursor.next">fn next</a></li>
+</ul>
+</li>
+
+					</ul>
+				</nav>
+			</header>
+			<div class="doc-scrollview" tabindex="-1" id="main-content">
+				<div class="doc-container">
+					<div class="doc-content">
+								<section id="readme_mongo" class="doc-node">
+			<div class="title"><h1> mongo <a href="#readme_mongo">#</a></h1></div><h2>Install</h2>
+<pre><code class="language-bash">v install https://github.com/moixllik/v-mongo
+</code></pre>
+<h2>Import</h2>
+<pre><code class="language-v">import mongo
+
+uri := mongo.uri('mongodb://localhost:27017/')
+</code></pre>
+<h2>Driver requirements</h2>
+<h3>Debian or Ubuntu</h3>
+<pre><code class="language-bash">sudo apt update -y &amp;&amp; sudo apt upgrade -y
+# DEV
+sudo apt install -y libmongoc-dev
+
+# CLI
+sudo apt install -y libbson-1.0-0 libmongoc-1.0-0
+</code></pre>
+<h3>Alpine</h3>
+<pre><code class="language-bash">apk update &amp;&amp; apk upgrade
+# DEV
+apk add --no-cache build-base mongo-c-driver-dev
+
+# CLI
+apk add --no-cache gcompat openssl libatomic
+apk add --no-cache mongo-c-driver
+</code></pre>
+<h3>Windows</h3>
+<p>It is necessary to specify the path to the <a href="https://github.com/moixllik/mongo/tree/main/thirdparty/win64/bin">DLLs</a> (<code>bson-1.0</code> and <code>mongoc-1.0</code>) or have them in the same folder as the executable.</p>
+
+</section>
+
+		<section id="new_oid" class="doc-node">
+			<div class="title"><h2>fn new_oid <a href="#new_oid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">new_oid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> OId</code></pre>
+<p><code>OId</code> with new <code>hash</code></p>
+
+</section>
+		<section id="to_oid" class="doc-node">
+			<div class="title"><h2>fn to_oid <a href="#to_oid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">to_oid</span><span class="token punctuation">(</span>hash <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span>OId</code></pre>
+<p><a href="https://mongoc.org/libbson/current/bson_oid_is_valid.html">https://mongoc.org/libbson/current/bson_oid_is_valid.html</a></p>
+
+</section>
+		<section id="to_bson" class="doc-node">
+			<div class="title"><h2>fn to_bson <a href="#to_bson">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">to_bson</span><span class="token punctuation">(</span>json_string <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span>Bson</code></pre>
+<p><a href="https://mongoc.org/libbson/current/bson_new_from_json.html">https://mongoc.org/libbson/current/bson_new_from_json.html</a></p>
+
+</section>
+		<section id="to_json" class="doc-node">
+			<div class="title"><h2>fn to_json <a href="#to_json">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> to_json<span class="token punctuation">[</span><span class="token builtin">T</span><span class="token punctuation">]</span><span class="token punctuation">(</span>val <span class="token builtin">T</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p>Parse <code>V Structs</code> to JSON string</p>
+
+</section>
+		<section id="OId" class="doc-node">
+			<div class="title"><h2>struct OId <a href="#OId">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">OId</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	hash <span class="token builtin">string</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</section>
+		<section id="OId.str" class="doc-node">
+			<div class="title"><h2>fn (OId) str <a href="#OId.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>oid OId<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p><code>OId</code> for filters <code>{&quot;$oid&quot;:&quot;hash&quot;}</code></p>
+
+</section>
+		<section id="Bson" class="doc-node">
+			<div class="title"><h2>struct Bson <a href="#Bson">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Bson</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	ref <span class="token builtin">voidptr</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span> <span class="token keyword">nil</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ref</code> is <code>&amp;C.bson_t</code></p>
+
+</section>
+		<section id="Bson.destroy" class="doc-node">
+			<div class="title"><h2>fn (Bson) destroy <a href="#Bson.destroy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>bson Bson<span class="token punctuation">)</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libbson/current/bson_destroy.html">https://mongoc.org/libbson/current/bson_destroy.html</a></p>
+
+</section>
+		<section id="Bson.str" class="doc-node">
+			<div class="title"><h2>fn (Bson) str <a href="#Bson.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>bson Bson<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<p><a href="https://mongoc.org/libbson/current/bson_as_json.html">https://mongoc.org/libbson/current/bson_as_json.html</a></p>
+
+</section>
+		<section id="Bson.oid" class="doc-node">
+			<div class="title"><h2>fn (Bson) oid <a href="#Bson.oid">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>bson Bson<span class="token punctuation">)</span> <span class="token function">oid</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">?</span>OId</code></pre>
+<p><code>oid := bson_document.oid('_id')?</code></p>
+
+</section>
+		<section id="Bson.decode" class="doc-node">
+			<div class="title"><h2>fn (Bson) decode <a href="#Bson.decode">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>bson Bson<span class="token punctuation">)</span> decode<span class="token punctuation">[</span><span class="token builtin">T</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token punctuation">(</span>OId<span class="token punctuation">,</span> <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p><code>id, data := bson_document.decode[Data]()!</code></p>
+
+</section>
+		<section id="C.bson_t" class="doc-node">
+			<div class="title"><h2>struct C.bson_t <a href="#C.bson_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">bson_t</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libbson/current/bson_t.html">https://mongoc.org/libbson/current/bson_t.html</a></p>
+
+</section>
+		<section id="C.bson_error_t" class="doc-node">
+			<div class="title"><h2>struct C.bson_error_t <a href="#C.bson_error_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">bson_error_t</span> <span class="token punctuation">{</span>
+	domain  <span class="token builtin">u32</span>
+	code    <span class="token builtin">u32</span>
+	message <span class="token builtin">charptr</span>
+<span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libbson/current/bson_error_t.html">https://mongoc.org/libbson/current/bson_error_t.html</a></p>
+
+</section>
+		<section id="C.mongoc_uri_t" class="doc-node">
+			<div class="title"><h2>struct C.mongoc_uri_t <a href="#C.mongoc_uri_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">mongoc_uri_t</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_uri_t.html">https://mongoc.org/libmongoc/current/mongoc_uri_t.html</a></p>
+
+</section>
+		<section id="C.mongoc_client_t" class="doc-node">
+			<div class="title"><h2>struct C.mongoc_client_t <a href="#C.mongoc_client_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">mongoc_client_t</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_client_t.html">https://mongoc.org/libmongoc/current/mongoc_client_t.html</a></p>
+
+</section>
+		<section id="C.mongoc_database_t" class="doc-node">
+			<div class="title"><h2>struct C.mongoc_database_t <a href="#C.mongoc_database_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">mongoc_database_t</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_database_t.html">https://mongoc.org/libmongoc/current/mongoc_database_t.html</a></p>
+
+</section>
+		<section id="C.mongoc_collection_t" class="doc-node">
+			<div class="title"><h2>struct C.mongoc_collection_t <a href="#C.mongoc_collection_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">mongoc_collection_t</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_t.html">https://mongoc.org/libmongoc/current/mongoc_collection_t.html</a></p>
+
+</section>
+		<section id="C.mongoc_cursor_t" class="doc-node">
+			<div class="title"><h2>struct C.mongoc_cursor_t <a href="#C.mongoc_cursor_t">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> C<span class="token punctuation">.</span><span class="token symbol">mongoc_cursor_t</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_cursor_t.html">https://mongoc.org/libmongoc/current/mongoc_cursor_t.html</a></p>
+
+</section>
+		<section id="Collection" class="doc-node">
+			<div class="title"><h2>struct Collection <a href="#Collection">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Collection</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	ref <span class="token builtin">voidptr</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span> <span class="token keyword">nil</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ref</code> is <code>&amp;C.mongoc_collection_t</code></p>
+
+</section>
+		<section id="Collection.find" class="doc-node">
+			<div class="title"><h2>fn (Collection) find <a href="#Collection.find">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> <span class="token function">find</span><span class="token punctuation">(</span>filter <span class="token builtin">string</span><span class="token punctuation">,</span> opts <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span>Cursor</code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_find_with_opts.html">https://mongoc.org/libmongoc/current/mongoc_collection_find_with_opts.html</a></p>
+
+</section>
+		<section id="Collection.find_one" class="doc-node">
+			<div class="title"><h2>fn (Collection) find_one <a href="#Collection.find_one">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> find_one<span class="token punctuation">[</span><span class="token builtin">T</span><span class="token punctuation">]</span><span class="token punctuation">(</span>filter <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token punctuation">(</span>OId<span class="token punctuation">,</span> <span class="token builtin">T</span><span class="token punctuation">)</span></code></pre>
+<p><code>id, data := collection.find_one[Data](filter)!</code></p>
+
+</section>
+		<section id="Collection.insert" class="doc-node">
+			<div class="title"><h2>fn (Collection) insert <a href="#Collection.insert">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> <span class="token function">insert</span><span class="token punctuation">(</span>document <span class="token builtin">string</span><span class="token punctuation">,</span> opts <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token builtin">bool</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_insert_one.html">https://mongoc.org/libmongoc/current/mongoc_collection_insert_one.html</a></p>
+
+</section>
+		<section id="Collection.update" class="doc-node">
+			<div class="title"><h2>fn (Collection) update <a href="#Collection.update">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> <span class="token function">update</span><span class="token punctuation">(</span>selector <span class="token builtin">string</span><span class="token punctuation">,</span> update <span class="token builtin">string</span><span class="token punctuation">,</span> opts <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token builtin">bool</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_update_many.html">https://mongoc.org/libmongoc/current/mongoc_collection_update_many.html</a></p>
+
+</section>
+		<section id="Collection.delete" class="doc-node">
+			<div class="title"><h2>fn (Collection) delete <a href="#Collection.delete">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> <span class="token function">delete</span><span class="token punctuation">(</span>selector <span class="token builtin">string</span><span class="token punctuation">,</span> opts <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token builtin">bool</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_delete_many.html">https://mongoc.org/libmongoc/current/mongoc_collection_delete_many.html</a></p>
+
+</section>
+		<section id="Collection.destroy" class="doc-node">
+			<div class="title"><h2>fn (Collection) destroy <a href="#Collection.destroy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_destroy.html">https://mongoc.org/libmongoc/current/mongoc_collection_destroy.html</a></p>
+
+</section>
+		<section id="Collection.drop" class="doc-node">
+			<div class="title"><h2>fn (Collection) drop <a href="#Collection.drop">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>collection Collection<span class="token punctuation">)</span> <span class="token function">drop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token builtin">bool</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_collection_drop.html">https://mongoc.org/libmongoc/current/mongoc_collection_drop.html</a></p>
+
+</section>
+		<section id="close" class="doc-node">
+			<div class="title"><h2>fn close <a href="#close">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_cleanup.html">https://mongoc.org/libmongoc/current/mongoc_cleanup.html</a></p>
+
+</section>
+		<section id="uri" class="doc-node">
+			<div class="title"><h2>fn uri <a href="#uri">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">uri</span><span class="token punctuation">(</span>uri_string <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span>Uri</code></pre>
+<p>Initialize the MongoDB C Driver and return <code>Uri</code>.<br>
+<a href="https://mongoc.org/libmongoc/current/mongoc_init.html">https://mongoc.org/libmongoc/current/mongoc_init.html</a>.<br>
+<a href="https://mongoc.org/libmongoc/current/mongoc_uri_new_with_error.html">https://mongoc.org/libmongoc/current/mongoc_uri_new_with_error.html</a></p>
+
+</section>
+		<section id="Uri" class="doc-node">
+			<div class="title"><h2>struct Uri <a href="#Uri">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Uri</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	ref <span class="token builtin">voidptr</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span> <span class="token keyword">nil</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ref</code> is <code>&amp;C.mongoc_uri_t</code></p>
+
+</section>
+		<section id="Uri.destroy" class="doc-node">
+			<div class="title"><h2>fn (Uri) destroy <a href="#Uri.destroy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>uri Uri<span class="token punctuation">)</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_uri_destroy.html">https://mongoc.org/libmongoc/current/mongoc_uri_destroy.html</a></p>
+
+</section>
+		<section id="Uri.client" class="doc-node">
+			<div class="title"><h2>fn (Uri) client <a href="#Uri.client">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>uri Uri<span class="token punctuation">)</span> <span class="token function">client</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!</span>Client</code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_client_new_from_uri_with_error.html">https://mongoc.org/libmongoc/current/mongoc_client_new_from_uri_with_error.html</a></p>
+
+</section>
+		<section id="Client" class="doc-node">
+			<div class="title"><h2>struct Client <a href="#Client">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Client</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	ref <span class="token builtin">voidptr</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span> <span class="token keyword">nil</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ref</code> is <code>&amp;C.mongoc_client_t</code></p>
+
+</section>
+		<section id="Client.destroy" class="doc-node">
+			<div class="title"><h2>fn (Client) destroy <a href="#Client.destroy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>client Client<span class="token punctuation">)</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_client_destroy.html">https://mongoc.org/libmongoc/current/mongoc_client_destroy.html</a></p>
+
+</section>
+		<section id="Client.database" class="doc-node">
+			<div class="title"><h2>fn (Client) database <a href="#Client.database">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>client Client<span class="token punctuation">)</span> <span class="token function">database</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> Database</code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_client_get_database.html">https://mongoc.org/libmongoc/current/mongoc_client_get_database.html</a></p>
+
+</section>
+		<section id="Database" class="doc-node">
+			<div class="title"><h2>struct Database <a href="#Database">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Database</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	ref <span class="token builtin">voidptr</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span> <span class="token keyword">nil</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ref</code> is <code>&amp;C.mongoc_database_t</code></p>
+
+</section>
+		<section id="Database.destroy" class="doc-node">
+			<div class="title"><h2>fn (Database) destroy <a href="#Database.destroy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>database Database<span class="token punctuation">)</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_database_destroy.html">https://mongoc.org/libmongoc/current/mongoc_database_destroy.html</a></p>
+
+</section>
+		<section id="Database.drop" class="doc-node">
+			<div class="title"><h2>fn (Database) drop <a href="#Database.drop">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>database Database<span class="token punctuation">)</span> <span class="token function">drop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!</span><span class="token builtin">bool</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_database_drop.html">https://mongoc.org/libmongoc/current/mongoc_database_drop.html</a></p>
+
+</section>
+		<section id="Database.collection" class="doc-node">
+			<div class="title"><h2>fn (Database) collection <a href="#Database.collection">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>database Database<span class="token punctuation">)</span> <span class="token function">collection</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> Collection</code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_database_get_collection.html">https://mongoc.org/libmongoc/current/mongoc_database_get_collection.html</a></p>
+
+</section>
+		<section id="Cursor" class="doc-node">
+			<div class="title"><h2>struct Cursor <a href="#Cursor">#</a></h2></div><pre class="signature"><code><span class="token keyword">struct</span> <span class="token symbol">Cursor</span> <span class="token punctuation">{</span>
+<span class="token keyword">pub</span><span class="token punctuation">:</span>
+	ref <span class="token builtin">voidptr</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span> <span class="token keyword">nil</span> <span class="token punctuation">}</span>
+<span class="token keyword">pub</span> <span class="token keyword">mut</span><span class="token punctuation">:</span>
+	idx <span class="token builtin">int</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>ref</code> is <code>&amp;C.mongoc_cursor_t</code></p>
+
+</section>
+		<section id="Cursor.destroy" class="doc-node">
+			<div class="title"><h2>fn (Cursor) destroy <a href="#Cursor.destroy">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>cursor Cursor<span class="token punctuation">)</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_cursor_destroy.html">https://mongoc.org/libmongoc/current/mongoc_cursor_destroy.html</a></p>
+
+</section>
+		<section id="Cursor.next" class="doc-node">
+			<div class="title"><h2>fn (Cursor) next <a href="#Cursor.next">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span><span class="token keyword">mut</span> cursor Cursor<span class="token punctuation">)</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span>Bson</code></pre>
+<p><a href="https://mongoc.org/libmongoc/current/mongoc_cursor_next.html">https://mongoc.org/libmongoc/current/mongoc_cursor_next.html</a></p>
+
+</section>
+
+						<div class="footer">Powered by vdoc. Generated on: 16 Oct 2023 14:23:02</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script src="doc.js"></script>
+		<script async src="search_index.js"></script>
+	</body>
+</html>
