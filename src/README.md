@@ -36,4 +36,4 @@ apk add --no-cache mongo-c-driver
 ```
 
 ### Windows
-It is necessary to specify the path to the [DLLs](https://github.com/moixllik/mongo/tree/main/thirdparty/win64/bin) (`bson-1.0` and `mongoc-1.0`) or have them in the same folder as the executable.
+It is necessary to specify the path to the [DLLs](https://github.com/moixllik/v-mongo/tree/main/thirdparty/win64/bin) (`bson-1.0` and `mongoc-1.0`) or have them in the same folder as the executable.
