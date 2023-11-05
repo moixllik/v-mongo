@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -36,7 +36,7 @@
 						<div class="info">
 							<div class="module">mongo</div>
 							<div class="toggle-version-container">
-								<span> e0e0987</span>
+								<span> 2ef49b8</span>
 								<div
 									id="dark-mode-toggle"
 									role="switch"
@@ -149,34 +149,23 @@
 				<div class="doc-container">
 					<div class="doc-content">
 								<section id="readme_mongo" class="doc-node">
-			<div class="title"><h1> mongo <a href="#readme_mongo">#</a></h1></div><h2>Install</h2>
-<pre><code class="language-bash">v install https://github.com/moixllik/v-mongo
-</code></pre>
-<h2>Import</h2>
-<pre><code class="language-v">import mongo
+			<div class="title"><h1> mongo <a href="#readme_mongo">#</a></h1></div><h2>Install</h2><pre><code class="language-bash">v install https://github.com/moixllik/v-mongo
+</code></pre><h2>Import</h2><pre><code class="language-v"><span class="token keyword">import</span> mongo
 
-uri := mongo.uri('mongodb://localhost:27017/')
-</code></pre>
-<h2>Driver requirements</h2>
-<h3>Debian or Ubuntu</h3>
-<pre><code class="language-bash">sudo apt update -y &amp;&amp; sudo apt upgrade -y
+uri <span class="token operator">:=</span> mongo<span class="token punctuation">.</span><span class="token function">uri</span><span class="token punctuation">(</span><span class="token string">'mongodb://localhost:27017/'</span><span class="token punctuation">)</span></code></pre><h2>Driver requirements</h2><h3>Debian or Ubuntu</h3><pre><code class="language-bash">sudo apt update -y &amp;&amp; sudo apt upgrade -y
 # DEV
 sudo apt install -y libmongoc-dev
 
 # CLI
 sudo apt install -y libbson-1.0-0 libmongoc-1.0-0
-</code></pre>
-<h3>Alpine</h3>
-<pre><code class="language-bash">apk update &amp;&amp; apk upgrade
+</code></pre><h3>Alpine</h3><pre><code class="language-bash">apk update &amp;&amp; apk upgrade
 # DEV
 apk add --no-cache build-base mongo-c-driver-dev
 
 # CLI
 apk add --no-cache gcompat openssl libatomic
 apk add --no-cache mongo-c-driver
-</code></pre>
-<h3>Windows</h3>
-<p>It is necessary to specify the path to the <a href="https://github.com/moixllik/v-mongo/tree/main/thirdparty/win64/bin">DLLs</a> (<code>bson-1.0</code> and <code>mongoc-1.0</code>) or have them in the same folder as the executable.</p>
+</code></pre><h3>Windows</h3><p>It is necessary to specify the path to the <a href="https://github.com/moixllik/v-mongo/tree/main/thirdparty/win64/bin">DLLs</a> (<code>bson-1.0</code> and <code>mongoc-1.0</code>) or have them in the same folder as the executable. Also the compiler <a href="https://visualstudio.microsoft.com/es/visual-cpp-build-tools/">Microsoft C++ Build Tools</a>.</p>
 
 </section>
 
@@ -210,7 +199,7 @@ apk add --no-cache mongo-c-driver
 </section>
 		<section id="OId.str" class="doc-node">
 			<div class="title"><h2>fn (OId) str <a href="#OId.str">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token punctuation">(</span>oid OId<span class="token punctuation">)</span> <span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
-<p><code>OId</code> for filters <code>{&quot;$oid&quot;:&quot;hash&quot;}</code></p>
+<p><code>OId</code> for filters <code>{"$oid":"hash"}</code></p>
 
 </section>
 		<section id="Bson" class="doc-node">
@@ -330,9 +319,7 @@ apk add --no-cache mongo-c-driver
 </section>
 		<section id="uri" class="doc-node">
 			<div class="title"><h2>fn uri <a href="#uri">#</a></h2></div><pre class="signature"><code><span class="token keyword">fn</span> <span class="token function">uri</span><span class="token punctuation">(</span>uri_string <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">!</span>Uri</code></pre>
-<p>Initialize the MongoDB C Driver and return <code>Uri</code>.<br>
-<a href="https://mongoc.org/libmongoc/current/mongoc_init.html">https://mongoc.org/libmongoc/current/mongoc_init.html</a>.<br>
-<a href="https://mongoc.org/libmongoc/current/mongoc_uri_new_with_error.html">https://mongoc.org/libmongoc/current/mongoc_uri_new_with_error.html</a></p>
+<p>Initialize the MongoDB C Driver and return <code>Uri</code>.<br /><a href="https://mongoc.org/libmongoc/current/mongoc_init.html">https://mongoc.org/libmongoc/current/mongoc_init.html</a>.<br /><a href="https://mongoc.org/libmongoc/current/mongoc_uri_new_with_error.html">https://mongoc.org/libmongoc/current/mongoc_uri_new_with_error.html</a></p>
 
 </section>
 		<section id="Uri" class="doc-node">
@@ -415,7 +402,7 @@ apk add --no-cache mongo-c-driver
 
 </section>
 
-						<div class="footer">Powered by vdoc. Generated on: 16 Oct 2023 14:23:02</div>
+						<div class="footer">Powered by vdoc. Generated on: 5 Nov 2023 07:23:28</div>
 					</div>
 					
 				</div>
