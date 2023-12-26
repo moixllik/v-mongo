@@ -16,11 +16,11 @@ module mongo
 #include "mongoc/mongoc.h"
 
 // https://mongoc.org/libbson/current/bson_t.html
-[typedef]
+@[typedef]
 pub struct C.bson_t {}
 
 // https://mongoc.org/libbson/current/bson_error_t.html
-[typedef]
+@[typedef]
 pub struct C.bson_error_t {
 	domain  u32
 	code    u32
@@ -28,23 +28,23 @@ pub struct C.bson_error_t {
 }
 
 // https://mongoc.org/libmongoc/current/mongoc_uri_t.html
-[typedef]
+@[typedef]
 pub struct C.mongoc_uri_t {}
 
 // https://mongoc.org/libmongoc/current/mongoc_client_t.html
-[typedef]
+@[typedef]
 pub struct C.mongoc_client_t {}
 
 // https://mongoc.org/libmongoc/current/mongoc_database_t.html
-[typedef]
+@[typedef]
 pub struct C.mongoc_database_t {}
 
 // https://mongoc.org/libmongoc/current/mongoc_collection_t.html
-[typedef]
+@[typedef]
 pub struct C.mongoc_collection_t {}
 
 // https://mongoc.org/libmongoc/current/mongoc_cursor_t.html
-[typedef]
+@[typedef]
 pub struct C.mongoc_cursor_t {}
 
 fn C.bson_oid_is_valid(str &char, length &int) bool
